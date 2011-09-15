@@ -8,6 +8,7 @@ Bundle 'gmarik/vundle'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'SuperTab'
+Bundle 'Solarized'
 Bundle 'oscarsen/Slem'
 
 " mappings
@@ -36,6 +37,7 @@ set autoread
 set hidden
 set wildmenu
 syntax on
+syntax enable
 
 if filereadable(expand("~/dotfiles/vimrc_local"))
   source ~/dotfiles/vimrc_local

@@ -14,13 +14,16 @@ Bundle 'oscarsen/Slem'
 " mappings
 let mapleader = ' '
 "  FuzzyFinder
+nnoremap <silent> <Leader>ta :FufCoverageFile<CR>
 nnoremap <silent> <Leader>tp :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns',['**/*.py']]) \| FufCoverageFile<CR>
-nnoremap <silent> <Leader>tj :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns',['**/*.java','**/*.xml','**/*.wsdl']]) \| FufCoverageFile<CR>
+nnoremap <silent> <Leader>tr :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns',['**/*.rb']]) \| FufCoverageFile<CR>
+nnoremap <silent> <Leader>tj :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns',['**/*.java','**/*.xml','**/*.properties','**/*.wsdl']]) \| FufCoverageFile<CR>
+nnoremap <silent> <Leader>tc :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns',['**/*.cpp','**/*.c','**/*.h']]) \| FufCoverageFile<CR>
 nnoremap <silent> <Leader>tb :FufBuffer<CR>
 nnoremap <silent> <Leader>tq :FufQuickfix<CR>
 "  Slem
-nnoremap <Leader>c :call VimSlem(-1)<CR>
-nnoremap <Leader>l :call VimSlem(input("to line: ", ""))<CR>
+nnoremap <Leader>cc :call VimSlem(-1)<CR>
+nnoremap <Leader>cl :call VimSlem(input("to line: ", ""))<CR>
 
 filetype plugin indent on
 

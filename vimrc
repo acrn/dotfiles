@@ -15,10 +15,18 @@ Bundle 'oscarsen/Slem'
 let mapleader = ' '
 "  FuzzyFinder
 nnoremap <silent> <Leader>ta :FufCoverageFile<CR>
-nnoremap <silent> <Leader>tp :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns',['**/*.py']]) \| FufCoverageFile<CR>
-nnoremap <silent> <Leader>tr :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns',['**/*.rb']]) \| FufCoverageFile<CR>
-nnoremap <silent> <Leader>tj :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns',['**/*.java','**/*.xml','**/*.properties','**/*.wsdl']]) \| FufCoverageFile<CR>
-nnoremap <silent> <Leader>tc :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns',['**/*.cpp','**/*.c','**/*.h']]) \| FufCoverageFile<CR>
+nnoremap <silent> <Leader>tp :call fuf#setOneTimeVariables(
+            \ ['g:fuf_coveragefile_globPatterns',['**/*.py']])
+            \ \| FufCoverageFile<CR>
+nnoremap <silent> <Leader>tr :call fuf#setOneTimeVariables(
+            \ ['g:fuf_coveragefile_globPatterns',['**/*.rb']])
+            \ \| FufCoverageFile<CR>
+nnoremap <silent> <Leader>tj :call fuf#setOneTimeVariables(
+            \ ['g:fuf_coveragefile_globPatterns',['**/*.java','**/*.xml',
+            \ '**/*.properties','**/*.wsdl']]) \| FufCoverageFile<CR>
+nnoremap <silent> <Leader>tc :call fuf#setOneTimeVariables(
+            \ ['g:fuf_coveragefile_globPatterns',['**/*.cpp','**/*.c',
+            \ '**/*.h']]) \| FufCoverageFile<CR>
 nnoremap <silent> <Leader>tb :FufBuffer<CR>
 nnoremap <silent> <Leader>tq :FufQuickfix<CR>
 "  Slem
@@ -35,6 +43,7 @@ set expandtab
 set smarttab
 set autoindent
 set smartindent
+set ruler
 
 set autowrite
 set autoread
@@ -43,6 +52,10 @@ set hidden
 set wildmenu
 syntax on
 syntax enable
+
+" ctags
+set tags=./.tags;$HOME
+autocmd FileType java set tags+=~/tags/sunjdk
 
 if filereadable(expand("~/dotfiles/vimrc_local"))
   source ~/dotfiles/vimrc_local

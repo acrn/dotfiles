@@ -9,6 +9,8 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'SuperTab'
 Bundle 'Solarized'
+Bundle 'Tagbar'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'oscarsen/Slem'
 
 " mappings
@@ -30,8 +32,8 @@ nnoremap <silent> <Leader>tc :call fuf#setOneTimeVariables(
 nnoremap <silent> <Leader>tb :FufBuffer<CR>
 nnoremap <silent> <Leader>tq :FufQuickfix<CR>
 "  Slem
-nnoremap <Leader>cc :call VimSlem(-1)<CR>
-nnoremap <Leader>cl :call VimSlem(input("to line: ", ""))<CR>
+nnoremap <Leader>sc :call VimSlem(-1)<CR>
+nnoremap <Leader>sl :call VimSlem(input("to line: ", ""))<CR>
 
 filetype plugin indent on
 

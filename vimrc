@@ -14,8 +14,10 @@ Bundle 'oscarsen/Slem'
 " mappings
 let mapleader = ' '
 "  FuzzyFinder
-nnoremap <Leader>t :FufCoverageFile<CR>
-nnoremap <Leader>b :FufBuffer<CR>
+nnoremap <silent> <Leader>tp :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns',['**/*.py']]) \| FufCoverageFile<CR>
+nnoremap <silent> <Leader>tj :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns',['**/*.java','**/*.xml','**/*.wsdl']]) \| FufCoverageFile<CR>
+nnoremap <silent> <Leader>tb :FufBuffer<CR>
+nnoremap <silent> <Leader>tq :FufQuickfix<CR>
 "  Slem
 nnoremap <Leader>c :call VimSlem(-1)<CR>
 nnoremap <Leader>l :call VimSlem(input("to line: ", ""))<CR>

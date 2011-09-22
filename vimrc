@@ -54,14 +54,19 @@ set hidden
 set wildmenu
 syntax on
 syntax enable
+set foldmethod=syntax
 
 " swap
 set directory=~/.vim/tmp
 set backupdir=~/.vim/tmp
+
 " ctags
 set tags=./.tags;$HOME
 autocmd FileType java set tags+=~/tags/sunjdk
 autocmd FileType python set tags+=~/tags/python3_1
+
+" macros
+autocmd FileType java source ~/.vim/macros/java.vim
 
 if filereadable(expand("~/dotfiles/vimrc_local"))
   source ~/dotfiles/vimrc_local

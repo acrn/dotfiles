@@ -55,9 +55,13 @@ set wildmenu
 syntax on
 syntax enable
 
+" swap
+set directory=~/.vim/tmp
+set backupdir=~/.vim/tmp
 " ctags
 set tags=./.tags;$HOME
 autocmd FileType java set tags+=~/tags/sunjdk
+autocmd FileType python set tags+=~/tags/python3_1
 
 if filereadable(expand("~/dotfiles/vimrc_local"))
   source ~/dotfiles/vimrc_local

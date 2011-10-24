@@ -107,6 +107,8 @@ if [ -f ~/.bashrc_local ]; then
     . ~/.bashrc_local
 fi
 
+export PATH=~/bin:$PATH
+
 # functions
 #  TODO: make it find files firstly, move to a script file of its own
 function fish { pushd $(find . -type d -iname "*$1*"); }

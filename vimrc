@@ -82,11 +82,17 @@ set backupdir=~/.vim/tmp
 
 " ctags
 set tags=./.tags;$HOME
-autocmd FileType java set tags+=~/tags/sunjdk
-autocmd FileType python set tags+=~/tags/python3_1
+augroup ftype_java
+    autocmd!
+    autocmd FileType java setlocal tags+=~/tags/sunjdk
+    autocmd FileType java source ~/.vim/macros/java.vim
+    autocmd FileType java iab sout System.out.println
+augroup END
 
-" macros - get rid of this
-autocmd FileType java source ~/.vim/macros/java.vim
+augroup ftype_python
+    autocmd!
+    autocmd FileType python setlocal tags+=~/tags/python3_1
+augroup END
 
 if filereadable(expand("~/dotfiles/vimrc_local"))
   source ~/dotfiles/vimrc_local

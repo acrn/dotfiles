@@ -1,4 +1,4 @@
-set gfn=Liberation\ Mono\ 9
+set gfn=Liberation\ Mono\ 10
 set background=dark
 colorscheme solarized
 set guioptions-=m "-=mT doesn't work?

@@ -25,7 +25,7 @@ nnoremap <silent> <Leader>tr :call fuf#setOneTimeVariables(
             \ \| FufCoverageFile<CR>
 nnoremap <silent> <Leader>tj :call fuf#setOneTimeVariables(
             \ ['g:fuf_coveragefile_globPatterns',['**/*.java','**/*.xml',
-            \ '**/*.properties','**/*.wsdl']]) \| FufCoverageFile<CR>
+            \ '**/*.jsp','**/*.properties','**/*.wsdl']]) \| FufCoverageFile<CR>
 nnoremap <silent> <Leader>tc :call fuf#setOneTimeVariables(
             \ ['g:fuf_coveragefile_globPatterns',['**/*.cpp','**/*.c',
             \ '**/*.h']]) \| FufCoverageFile<CR>
@@ -85,7 +85,6 @@ set tags=./.tags;$HOME
 augroup ftype_java
     autocmd!
     autocmd FileType java setlocal tags+=~/tags/sunjdk
-    autocmd FileType java source ~/.vim/macros/java.vim
     autocmd FileType java iab sout System.out.println
 augroup END
 

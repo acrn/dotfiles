@@ -59,10 +59,12 @@ set autowrite
 set autoread
 
 set hidden
+set ignorecase
 set wildmenu
+set foldmethod=indent
+
 syntax on
 syntax enable
-set foldmethod=syntax
 
 " remaps
 nnoremap / /\v

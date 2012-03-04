@@ -78,21 +78,19 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+nnoremap <leader>riw yiw:%s/\<<C-r>"\>//g<left><left>
+nnoremap <leader>riW yiW:%s/\<<C-r>"\>//g<left><left>
+vnoremap <leader>n :normal 
+
 " swap
 set directory=~/.vim/tmp
 set backupdir=~/.vim/tmp
 
 " ctags
-set tags=./.tags;$HOME
+set tags=./tags;$HOME
 augroup ftype_java
     autocmd!
-    autocmd FileType java setlocal tags+=~/tags/sunjdk
     autocmd FileType java iab sout System.out.println
-augroup END
-
-augroup ftype_python
-    autocmd!
-    autocmd FileType python setlocal tags+=~/tags/python3_1
 augroup END
 
 if filereadable(expand("~/dotfiles/vimrc_local"))

@@ -70,7 +70,7 @@ syntax enable
 nnoremap / /\v
 vnoremap / /\v
 nnoremap <up> :so %<CR>
-nnoremap <down> :!%<CR>
+nnoremap <down> :!./%<CR>
 nnoremap <left> :bn<CR>
 nnoremap <right> :bp<CR>
 inoremap <up> <nop>

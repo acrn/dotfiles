@@ -37,7 +37,6 @@ nnoremap <Leader>sl :call VimSlem(input("to line: ", ""))<CR>
 
 "  searching
 set hlsearch
-set ignorecase
 set incsearch
 set showmatch
 set smartcase
@@ -59,7 +58,6 @@ set autowrite
 set autoread
 
 set hidden
-set ignorecase
 set wildmenu
 set foldmethod=indent
 
@@ -67,8 +65,6 @@ syntax on
 syntax enable
 
 " remaps
-nnoremap / /\v
-vnoremap / /\v
 nnoremap <up> :so %<CR>
 nnoremap <down> :!./%<CR>
 nnoremap <left> :bn<CR>

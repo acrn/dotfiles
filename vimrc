@@ -89,6 +89,11 @@ augroup ftype_java
     autocmd FileType java iab sout System.out.println
 augroup END
 
+augroup ftype_markdown
+    autocmd!
+    autocmd FileType markdown nnoremap <F12> :w<CR>:!markdown % > %.html<CR>
+augroup END
+
 if filereadable(expand("~/dotfiles/vimrc_local"))
   source ~/dotfiles/vimrc_local
 endif

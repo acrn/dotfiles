@@ -60,6 +60,7 @@ set autoread
 set hidden
 set wildmenu
 set foldmethod=indent
+set foldlevelstart=20
 
 syntax on
 syntax enable
@@ -91,7 +92,7 @@ augroup END
 
 augroup ftype_markdown
     autocmd!
-    autocmd FileType markdown nnoremap <F12> :w<CR>:!markdown % > %.html<CR>
+    autocmd FileType markdown nnoremap <F12> :w<CR>:!markdown2b % > %.html<CR>
 augroup END
 
 if filereadable(expand("~/dotfiles/vimrc_local"))

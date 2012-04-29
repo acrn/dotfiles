@@ -1,0 +1,10 @@
+[user]
+	name = Anders Oscarsen
+	email = andersoscarsen@gmail.com
+[merge]
+	tool = vimdiff
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto

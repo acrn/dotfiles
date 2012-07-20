@@ -16,21 +16,11 @@ Bundle 'oscarsen/Slem'
 " mappings
 let mapleader = ' '
 "  FuzzyFinder
-nnoremap <silent> <Leader>ta :FufCoverageFile<CR>
-nnoremap <silent> <Leader>tp :call fuf#setOneTimeVariables(
-            \ ['g:fuf_coveragefile_globPatterns',['**/*.py']])
-            \ \| FufCoverageFile<CR>
-nnoremap <silent> <Leader>tr :call fuf#setOneTimeVariables(
-            \ ['g:fuf_coveragefile_globPatterns',['**/*.rb']])
-            \ \| FufCoverageFile<CR>
-nnoremap <silent> <Leader>tj :call fuf#setOneTimeVariables(
-            \ ['g:fuf_coveragefile_globPatterns',['**/*.java','**/*.xml',
-            \ '**/*.jsp','**/*.properties','**/*.wsdl']]) \| FufCoverageFile<CR>
-nnoremap <silent> <Leader>tc :call fuf#setOneTimeVariables(
-            \ ['g:fuf_coveragefile_globPatterns',['**/*.cpp','**/*.c',
-            \ '**/*.h']]) \| FufCoverageFile<CR>
+nnoremap <silent> <Leader>p :FufFile **/<CR>
 nnoremap <silent> <Leader>tb :FufBuffer<CR>
+nnoremap <silent> <Leader>tl :FufLine<CR>
 nnoremap <silent> <Leader>tq :FufQuickfix<CR>
+nnoremap <silent> <Leader>tt :FufTaggedFile<CR>
 "  Slem
 nnoremap <Leader>sc :call VimSlem(-1)<CR>
 nnoremap <Leader>sl :call VimSlem(input("to line: ", ""))<CR>
@@ -51,13 +41,14 @@ set softtabstop=4
 set expandtab
 set smarttab
 set autoindent
-set smartindent
+set nosmartindent
 set ruler
 
 set autowrite
 set autoread
 
 set hidden
+set wildignore+=*/build/*,*.egg,*.zip,*/.svn/*,*.zip,*.class
 set wildmenu
 set foldmethod=indent
 set foldlevelstart=20

@@ -48,7 +48,8 @@ set autowrite
 set autoread
 
 set hidden
-set wildignore+=*/build/*,*.egg,*.zip,*/.svn/*,*.zip,*.class
+set wildignore=*/build/*,*/.svn/*,*/.git/*,*.zip,*.zip,*.class
+set wildignore+=*/__pycache__/*,*.egg,*.pyc
 set wildmenu
 set wildignore+=*/build/*,*.egg,*.zip,*/.svn/*,*.zip,*.class,*.pyc
 set foldmethod=indent
@@ -58,6 +59,7 @@ syntax on
 syntax enable
 
 " remaps
+nnoremap <esc> :
 nnoremap <up> :so %<CR>
 nnoremap <down> :!./%<CR>
 nnoremap <left> :bn<CR>
@@ -67,8 +69,14 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
-nnoremap <leader>riw yiw:%s/\<<C-r>"\>//g<left><left>
-nnoremap <leader>riW yiW:%s/\<<C-r>"\>//g<left><left>
+" replace
+nnoremap <leader>riw yiw:/gc<home>%s/\<<C-r>"\>/
+nnoremap <leader>riW yiW:/gc<home>%s/\<<C-r>"\>/
+
+" search
+nnoremap <leader>gp yiw:/ **/*.py<home>vimgrep /
+nnoremap <leader>gjs yiw:/ **/*.js<home>vimgrep /
+
 vnoremap <leader>n :normal 
 
 " swap
@@ -86,6 +94,9 @@ augroup ftype_markdown
     autocmd!
     autocmd FileType markdown nnoremap <F12> :w<CR>:!markdown2b % > %.html<CR>
 augroup END
+
+autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
+au BufRead,BufNewFile *.vala,*.vapi setfiletype vala
 
 if filereadable(expand("~/dotfiles/vimrc_local"))
   source ~/dotfiles/vimrc_local

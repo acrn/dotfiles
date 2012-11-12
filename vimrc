@@ -58,20 +58,17 @@ syntax on
 syntax enable
 
 " remaps
-nnoremap <esc> :
 nnoremap <up> :so %<CR>
 nnoremap <down> :!./%<CR>
 nnoremap <left> :bn<CR>
 nnoremap <right> :bp<CR>
+inoremap <up> <nop>
+inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
-" replace
-nnoremap <leader>riw yiw:%s/\<<C-r>"\>//gc<left><left><left>
-nnoremap <leader>riW yiW:%s/\<<C-r>"\>//gc<left><left><left>
-
-" grep
-nnoremap <leader>gp :/ **/*.py<home>vimgrep /
+nnoremap <leader>riw yiw:%s/\<<C-r>"\>//g<left><left>
+nnoremap <leader>riW yiW:%s/\<<C-r>"\>//g<left><left>
 vnoremap <leader>n :normal 
 
 " swap

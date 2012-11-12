@@ -64,10 +64,6 @@ nnoremap <up> :so %<CR>
 nnoremap <down> :!./%<CR>
 nnoremap <left> :bn<CR>
 nnoremap <right> :bp<CR>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
 
 " replace
 nnoremap <leader>riw yiw:/gc<home>%s/\<<C-r>"\>/

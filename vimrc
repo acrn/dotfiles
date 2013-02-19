@@ -12,6 +12,7 @@ Bundle 'Solarized'
 Bundle 'Tagbar'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'oscarsen/Slem'
+Bundle 'klen/python-mode'
 
 " mappings
 let mapleader = ' '
@@ -43,6 +44,7 @@ set smarttab
 set autoindent
 set nosmartindent
 set ruler
+autocmd BufRead,BufNewFile *.html,*.js,*.css setl shiftwidth=2 tabstop=2 softtabstop=2
 
 set autowrite
 set autoread

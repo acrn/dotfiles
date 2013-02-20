@@ -13,6 +13,7 @@ Bundle 'Tagbar'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'oscarsen/Slem'
 Bundle 'klen/python-mode'
+Bundle 'Lokaltog/vim-powerline'
 
 " mappings
 let mapleader = ' '
@@ -25,6 +26,9 @@ nnoremap <silent> <Leader>tt :FufTaggedFile<CR>
 "  Slem
 nnoremap <Leader>sc :call VimSlem(-1)<CR>
 nnoremap <Leader>sl :call VimSlem(input("to line: ", ""))<CR>
+"  powerline
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
 
 "  searching
 set hlsearch

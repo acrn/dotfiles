@@ -14,6 +14,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'oscarsen/Slem'
 Bundle 'klen/python-mode'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'vim-scripts/VimClojure'
 
 " mappings
 let mapleader = ' '

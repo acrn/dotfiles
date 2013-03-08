@@ -30,6 +30,10 @@ nnoremap <Leader>sl :call VimSlem(input("to line: ", ""))<CR>
 "  powerline
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
+"  pymode
+"    This sounds like a good idea, but it creates surprising diffs when editing
+"    other people's code.
+let g:pymode_utils_whitespaces = 0
 
 "  searching
 set hlsearch

@@ -92,10 +92,6 @@ set backupdir=~/.vim/tmp
 
 " ctags
 set tags=./tags;$HOME
-augroup ftype_java
-    autocmd!
-    autocmd FileType java iab sout System.out.println
-augroup END
 
 augroup ftype_markdown
     autocmd!

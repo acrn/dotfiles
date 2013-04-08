@@ -1,15 +1,15 @@
 " This file contains actions that should only be taken on my work computer
 
 " My default settings are fine for python, bash and such, but for all web
-" related files shorter tabs should be used
+" related files shorter indentation should be used
 autocmd BufRead,BufNewFile *.html,*.js,*.css
     \ setl shiftwidth=2 tabstop=2 softtabstop=2
 
-" This is meant to replace a setup where the machine running the server mounted
-" the source directory on the development maching using NFS. It worked well
-" enough but the performance was lacking, there was also a slight delay for
-" the server to note file changes and restart the web server, sometimes it
-" didn't trigger at all. This should work better.
+" This replaces a setup where the machine running the server mounted the source
+" directory on the development maching using NFS. It worked well enough but the
+" performance was lacking, there was also a slight delay for the server to note
+" file changes and restart the web server, sometimes it didn't trigger at all.
+" This should work better.
 :autocmd BufWritePost /home/anders/src/python/define-4/*
     \ silent !rsync -az --exclude '.git' --exclude '*.pyc' --exclude '*.pyo'
     \ --delete

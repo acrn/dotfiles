@@ -59,10 +59,9 @@ set autowrite
 set autoread
 
 set hidden
-set wildignore=*/build/*,*/.svn/*,*/.git/*,*.zip,*.zip,*.class
-set wildignore+=*/__pycache__/*,*.egg,*.pyc
+set wildignore=*/build/*,*/.svn/*,*/.git/*,*.class,*.zip
+set wildignore+=*/__pycache__/*,*.egg,*.pyc,*.pyo,*.o
 set wildmenu
-set wildignore+=*/build/*,*.egg,*.zip,*/.svn/*,*.zip,*.class,*.pyc
 set foldmethod=indent
 set foldlevelstart=20
 

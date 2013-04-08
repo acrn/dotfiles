@@ -15,6 +15,7 @@ Bundle 'oscarsen/Slem'
 Bundle 'klen/python-mode'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/VimClojure'
+Bundle 'mattn/zencoding-vim'
 
 " mappings
 let mapleader = ' '

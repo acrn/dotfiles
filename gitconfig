@@ -26,5 +26,9 @@
     type = cat-file -t
     dump = cat-file -p
     find = "!git ls-files | egrep -i --color=auto"
+    sync="!git ls-files --full-name \
+          | rsync -vaz --no-r --files-from=- \
+              $(git rev-parse --show-toplevel) \
+              centos.local:$(git rev-parse --show-toplevel)"
 [grep]
     extendedRegexp = true

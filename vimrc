@@ -4,6 +4,7 @@ filetype off
 " vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
 Bundle 'gmarik/vundle'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -15,7 +16,9 @@ Bundle 'oscarsen/Slem'
 Bundle 'klen/python-mode'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/VimClojure'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-surround'
 
 " mappings
 let mapleader = ' '

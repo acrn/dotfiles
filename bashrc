@@ -50,7 +50,8 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    source /usr/share/git-core/contrib/completion/git-prompt.sh
+    PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[02;33m\]$(__git_ps1)\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -111,6 +112,8 @@ set -o vi
 # fi
 
 export PATH=~/bin:$PATH
+# Qt's raster backend bugs out skype, keepassx and virtualbox
+export QT_GRAPHICSSYSTEM=native
 
 # functions
 #  TODO: make it find files firstly, move to a script file of its own

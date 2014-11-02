@@ -84,7 +84,8 @@ alias la='ls -A'
 alias l='ls -CF'
 alias info='info --vi-keys'
 # fix tmux woes
-alias ssh='TERM=screen ssh'
+alias ssh='TERM=screen ssh' # TODO: Is this needed?
+alias tmux='TERM=xterm-256color tmux'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

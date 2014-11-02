@@ -103,6 +103,11 @@ augroup END
 autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 au BufRead,BufNewFile *.vala,*.vapi setfiletype vala
 
-if filereadable(expand("~/dotfiles/vimrc_local"))
-  source ~/dotfiles/vimrc_local
+autocmd BufRead,BufNewFile *.html,*.js,*.css,*.scss,*.yaml
+    \ setl shiftwidth=2 tabstop=2 softtabstop=2
+
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+  set background=dark
+  colorscheme solarized
 endif

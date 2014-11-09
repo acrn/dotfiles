@@ -2,35 +2,27 @@ set nocompatible
 filetype off
 
 " vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'SuperTab'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'Solarized'
 Bundle 'Tagbar'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'oscarsen/Slem'
-Bundle 'klen/python-mode'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'vim-scripts/VimClojure'
-Bundle 'mattn/emmet-vim'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'gmarik/Vundle.vim'
+Bundle 'guns/vim-clojure-static'
+Bundle 'ivanov/vim-ipython'
 Bundle 'kien/ctrlp.vim'
+Bundle 'klen/python-mode'
+Bundle 'mattn/emmet-vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+call vundle#end()
 
 " mappings
 let mapleader = ' '
-"  FuzzyFinder
-nnoremap <silent> <Leader>p :FufFile **/<CR>
-nnoremap <silent> <Leader>tb :FufBuffer<CR>
-nnoremap <silent> <Leader>tl :FufLine<CR>
-nnoremap <silent> <Leader>tq :FufQuickfix<CR>
-nnoremap <silent> <Leader>tt :FufTaggedFile<CR>
-"  Slem
-nnoremap <Leader>sc :call VimSlem(-1)<CR>
-nnoremap <Leader>sl :call VimSlem(input("to line: ", ""))<CR>
 "  powerline
 let g:Powerline_symbols = 'fancy'
 set laststatus=2

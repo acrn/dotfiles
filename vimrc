@@ -55,10 +55,11 @@ set autoread
 
 set hidden
 set wildignore=*/build/*,*/.svn/*,*/.git/*,*.class,*.zip
-set wildignore+=*/__pycache__/*,*.egg,*.pyc,*.pyo,*.o
+set wildignore+=*/__pycache__/*,*.egg,*.pyc,*.pyo,*.o,*/bin/*
 set wildmenu
 set foldmethod=indent
 set foldlevelstart=20
+set listchars=tab:▸⋅,eol:¬,trail:⋅
 
 syntax on
 syntax enable
@@ -69,6 +70,9 @@ nnoremap <up> :so %<CR>
 nnoremap <down> :!./%<CR>
 nnoremap <left> :bn<CR>
 nnoremap <right> :bp<CR>
+nnoremap <leader>i :set list!<CR>
+nnoremap <leader>p :set paste!<CR>
+nnoremap <leader>t :TagbarToggle<cr>
 
 " replace
 nnoremap <leader>riw yiw:/gc<home>%s/\<<C-r>"\>/
@@ -87,6 +91,9 @@ set backupdir=~/.vim/tmp
 " ctags
 set tags=./tags;$HOME
 
+" autocommands
+au VimResized * exe "normal! \<c-w>="
+
 augroup ftype_markdown
     autocmd!
     autocmd FileType markdown nnoremap <F12> :w<CR>:!markdown2b % > %.html<CR>
@@ -103,3 +110,6 @@ if $COLORTERM == 'gnome-terminal'
   set background=dark
   colorscheme solarized
 endif
+
+" highlight lines that are 80+ chars
+call matchadd('ColorColumn', '\%80v', 20)

@@ -29,7 +29,7 @@ set laststatus=2
 "  pymode
 "    This sounds like a good idea, but it creates surprising diffs when editing
 "    other people's code.
-let g:pymode_utils_whitespaces = 0
+let g:pymode_trim_whitespaces = 0
 
 "  searching
 set hlsearch

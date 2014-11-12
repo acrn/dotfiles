@@ -4,7 +4,6 @@ filetype off
 " vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'L9'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'Solarized'
 Plugin 'Tagbar'
@@ -15,6 +14,7 @@ Plugin 'ivanov/vim-ipython'
 Plugin 'kien/ctrlp.vim'
 Plugin 'klen/python-mode'
 Plugin 'mattn/emmet-vim'
+Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'

@@ -79,8 +79,7 @@ nnoremap <leader>riw yiw:/gc<home>%s/\<<C-r>"\>/
 nnoremap <leader>riW yiW:/gc<home>%s/\<<C-r>"\>/
 
 " search
-nnoremap <leader>gp yiw:/ **/*.py<home>vimgrep /
-nnoremap <leader>gjs yiw:/ **/*.js<home>vimgrep /
+nnoremap <leader>a :Ag 
 
 vnoremap <leader>n :normal 
 

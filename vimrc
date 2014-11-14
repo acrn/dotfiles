@@ -30,6 +30,8 @@ set incsearch
 set showmatch
 set smartcase
 
+let g:ycm_server_log_level = 'warning'
+
 filetype plugin indent on
 
 " indentation and such
@@ -84,11 +86,6 @@ set tags=./tags;$HOME
 
 " autocommands
 au VimResized * exe "normal! \<c-w>="
-
-augroup ftype_markdown
-    autocmd!
-    autocmd FileType markdown nnoremap <F12> :w<CR>:!markdown2b % > %.html<CR>
-augroup END
 
 autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 au BufRead,BufNewFile *.vala,*.vapi setfiletype vala

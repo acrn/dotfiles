@@ -12,7 +12,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'guns/vim-clojure-static'
 Plugin 'ivanov/vim-ipython'
 Plugin 'kien/ctrlp.vim'
-Plugin 'klen/python-mode'
 Plugin 'mattn/emmet-vim'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdcommenter'
@@ -26,10 +25,6 @@ let mapleader = ' '
 "  powerline
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
-"  pymode
-"    This sounds like a good idea, but it creates surprising diffs when editing
-"    other people's code.
-let g:pymode_trim_whitespaces = 0
 
 "  searching
 set hlsearch

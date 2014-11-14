@@ -4,12 +4,12 @@ filetype off
 " vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'Solarized'
 Plugin 'Tagbar'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'guns/vim-clojure-static'
+Plugin 'itchyny/lightline.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'rking/ag.vim'
@@ -22,7 +22,6 @@ call vundle#end()
 " mappings
 let mapleader = ' '
 "  powerline
-let g:Powerline_symbols = 'fancy'
 set laststatus=2
 
 "  searching
@@ -53,7 +52,6 @@ set wildignore+=*/__pycache__/*,*.egg,*.pyc,*.pyo,*.o,*/bin/*
 set wildmenu
 set foldmethod=indent
 set foldlevelstart=20
-set listchars=tab:▸⋅,eol:¬,trail:⋅
 
 syntax on
 syntax enable
@@ -106,3 +104,9 @@ endif
 
 " highlight lines that are 80+ chars
 call matchadd('ColorColumn', '\%80v', 20)
+
+" cosmetics
+let g:lightline = {
+  \ 'separator': {'left':'➠', 'right':'⇚'},
+  \ 'subseparator': {'left':'➟', 'right':'⁕'}}
+set listchars=tab:▸⋅,eol:¬,trail:⋅
